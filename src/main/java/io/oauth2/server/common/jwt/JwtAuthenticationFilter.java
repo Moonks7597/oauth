@@ -1,7 +1,7 @@
 package io.oauth2.server.common.jwt;
 
 
-import io.oauth2.server.repository.UserRepository;
+import io.oauth2.server.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

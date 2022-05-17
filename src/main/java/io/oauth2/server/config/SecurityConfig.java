@@ -1,6 +1,6 @@
 package io.oauth2.server.config;
 
-import io.oauth2.server.repository.UserRepository;
+import io.oauth2.server.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -50,14 +50,9 @@ public class SecurityConfig {
                 .addFilterBefore(new JwtAuthenticationFilter(jwtTokenProvider, userRepository),
                         UsernamePasswordAuthenticationFilter.class)
                 .exceptionHandling()
-                .authenticationEntryPoint(new AuthenticationEntryPoint() {
-                    @Override
-                    public void commence(HttpServletRequest request,
-                                         HttpServletResponse response, AuthenticationException authException)
-                            throws IOException, ServletException {
-                        response.sendRedirect("/errorPage");
+                .authenticationEntryPoint((request, response, authException) -> {
+                    response.sendRedirect("/errorPage");
 //                        response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Unauthorized");
-                    }
                 })
                 .and()
                 .authorizeRequests()

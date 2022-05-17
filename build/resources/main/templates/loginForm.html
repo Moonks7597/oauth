@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>로그인 페이지</title>
+</head>
+<body>
+<h1>로그인 페이지</h1>
+<hr/>
+<form action="/loginProcess" method="post">
+<!--    <input type="hidden" name="client_id" th:value="${clientId}">-->
+<!--    <input type="hidden" name="client_secret" th:value="${clientSecret}">-->
+<!--    <input type="hidden" name="response_type" th:value="${responseType}">-->
+<!--    <input type="hidden" name="redirect_uri" th:value="${redirectUri}">-->
+<!--    <input type="hidden" name="scope" th:value="${scope}">-->
+    <input type="text" name="username" placeholder="Username"/> <br/>
+    <input type="password" name="password" placeholder="Password"/> <br/>
+    <button type="submit">로그인</button>
+</form>
+</body>
+</html>

@@ -20,14 +20,14 @@ public class Client {
     @Column(name = "client_id")
     private String clientId;
 
-    @Temporal(TemporalType.TIMESTAMP)
+//    @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "client_id_issued_at")
     private LocalDate clientIdIssuedAt;
 
     @Column(name = "client_secret")
     private String clientSecret;
 
-    @Temporal(TemporalType.TIMESTAMP)
+//    @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "client_secret_expires_at")
     private LocalDate clientSecretExpiresAt;
 

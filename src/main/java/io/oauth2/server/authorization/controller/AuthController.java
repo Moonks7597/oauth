@@ -18,25 +18,9 @@ public class AuthController {
         return "redirect:" + next;
     }
 
-//    @PostMapping("/client/register")
-//    public ResponseEntity<?> clientCreate(){
-//        return null;
-//    }
-
     @GetMapping("/error")
     public String errorPage(HttpServletResponse response) {
         return "errorPage";
-    }
-
-//    @GetMapping("/login")
-//    public String reDirectLogin() {
-//        String loginPage = "http://localhost:8090/login";
-//        return "redirect:" + loginPage;
-//    }
-
-    @GetMapping("/oauthLogin")
-    public String reDirectLogin() {
-        return "loginForm";
     }
 
     @GetMapping("/main")

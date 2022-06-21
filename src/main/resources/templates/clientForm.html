@@ -7,7 +7,7 @@
 <body>
 <h1>Client 등록 페이지</h1>
 <hr/>
-<form action="/client/register" method="post">
+<form action="/client/register" method="post" th:object="${clientDto}">
     <input type="text" name="clientId" placeholder="ClientId"/> <br/>
     <input type="text" name="clientName" placeholder="ClientName"/> <br/>
 <!--    <input type="text" name="redirectUris" placeholder="RedirectUris"/> <br/>-->

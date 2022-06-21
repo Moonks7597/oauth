@@ -25,7 +25,7 @@ public class ClientController {
     }
 
     @PostMapping("/client/register")
-    public ResponseEntity<?> create(@RequestBody ClientDto clientDto){
+    public ResponseEntity<?> create(@ModelAttribute ClientDto clientDto){
         Client client = clientDto.toEntity();
         return clientService.clientRegister(client);
     }
